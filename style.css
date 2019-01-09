@@ -1,107 +1,364 @@
-html																				{ font-family: 'PT Sans', sans-serif; box-sizing: border-box; margin: 0; padding: 0; background: url('images/resume-bg.jpg'); background-size: cover; background-color: #BCE0F0; background-attachment: fixed; }
-*, *:before, *:after 																{ box-sizing: inherit; }
-body 																				{ min-width: 300px; background: rgba(255,255,255,0.8); margin: 0 auto 0 auto; width: 80%; padding: 20px 30px 20px 30px; border-top: 8px solid #00A9E0; }
-a 																					{ color: #00A9E0;}
-a:hover																				{ text-decoration: none; }
-
-h1, h2, h3, h4																		{ margin: 0; font-weight: normal; }
-h1																					{ border-bottom: 2px solid #00A9E0; margin-bottom: 20px; font-weight: normal; }
-h2																					{ color: #00A9E0; margin-bottom: 5px; border-bottom: 1px solid #00A9E0; }
-h4																					{ line-height: 1.1em; font-weight: bold; }
-p 																					{ line-height: 1.6em; margin: 0; }
-ul 																					{ margin: 5px; }
-li 																					{ line-height: 1.6em; margin-bottom: .5em;}
-
-.clearfix:before,
-.clearfix:after 																	{ content: " "; display: table; }
-.clearfix:after 																	{ clear: both; }
-.clearfix 																			{ *zoom: 1; }
-
-#workexperience .two-column-left													{ min-width: 220px; max-width: 220px;  margin: 0; padding: 0;}
-#workexperience .two-column-right													{ margin: 0; padding: 5px 0 0 0; }
-
-
-.header-fixed																		{ min-width: 300px; background-color: #f5f5f5; margin: 0 auto 0 auto; padding: 20px 30px 0 30px; left: 0; right: 0; top: 0; width: 80%; border-top: 10px solid #00A9E0; }
-
-#info																				{ margin-top: 15px; }
-dt																					{ margin: 0 5px 8px 0; float: left; font-weight: bold; }
-dd																					{ margin: 0 0 8px 0; }
-dl 																					{ padding-bottom: 10px;}
-dt#address																			{ background: url(images/linkedin.png) no-repeat left top; background-size: 20px 20px; padding-left: 30px; }
-dt#email																			{ background: url(images/email.png) no-repeat left top; background-size: 20px 20px; padding-left: 30px; }
-dt#phone																			{ background: url(images/phone.png) no-repeat left top; background-size: 20px 20px; padding-left: 30px; }
-dt#resume																			{ background: url(images/resume.png) no-repeat left top; background-size: 20px 20px; padding-left: 30px; }
-
-#profile-circular 																	{ float: left; margin: 10px 40px 0 0; width: 120px; height: 120px; background-image: url('images/me-circle.png'); background-size: cover; display: block; border: 2px solid #00A9E0; border-radius: 60px; -webkit-border-radius: 60px; -moz-border-radius: 60px; }
-section#aboutme, 
-section#workexperience, 
-section#skills, 
-section#education, 
-section#languages																	{ margin: 20px 0 30px 0; }
-
-#workexperience div.clearfix												 		{ display: flex; }
-#workexperience span																{ display: block; padding-top: 5px; color: #888888; font-style: italic; }
-#workexperience h2																	{ background: url(images/experience.png) no-repeat 0px 2px; background-size: 24px 24px; padding-left: 30px; }
-#skills h2																			{ background: url(images/skills.png) no-repeat 0px 2px; background-size: 24px 24px; padding-left: 30px; }
-#education h2																		{ background: url(images/education.png) no-repeat 0px 2px; background-size: 24px 24px; padding-left: 30px; }
-#languages h2																		{ background: url(images/languages.png) no-repeat 0px 2px; background-size: 24px 24px; padding-left: 30px; }
-#contactme h2																		{ background: url(images/smile.png) no-repeat 0px 2px; background-size: 24px 24px; padding-left: 30px; }
-
-#portfolio																			{ border-top: 1px solid #00A9E0; margin-top: 20px; }
-#portfolio a																		{ display: block; margin: 30px auto 50px auto; border-radius: 50px; overflow:hidden; background: #00A9E0; color: #ffffff; width: 80%; min-width: 240px; font-size: 1em; height: 50px; text-align: center; line-height: 50px; text-decoration: none; }
-#portfolio a:hover																	{ text-decoration: none; background-color: #fff; border: 2px solid #00A9E0; color: #00A9E0; }
-
-#skills ul																			{ list-style-type: none; margin: 10px 0 20px 0; padding: 0; width: 100%; }
-#skills ul li 																		{ display: block; margin: 0 0 10px 0; padding: 0; }
-#skills div																			{ display: flex; justify-content: space-between; }
-#skills .two-column-left															{ width:50%; margin: 0 40px 0 0; padding: 0;}
-#skills .two-column-right															{ width:50%; margin: 0; padding: 0; }
-span.level3 																		{ text-indent: -9999px; display: block; margin: 0; width: 100px; float: right; background: url(images/level3.png)  no-repeat right; background-size: 75px 12px; image-rendering:optimizeQuality; }
-span.level4 																		{ text-indent: -9999px; display: block; margin: 0; width: 100px; float: right; background: url(images/level4.png)  no-repeat right; background-size: 75px 12px; image-rendering:optimizeQuality; }
-span.level5 																		{ text-indent: -9999px; display: block; margin: 0; width: 100px; float: right; background: url(images/level5.png)  no-repeat right; background-size: 75px 12px; image-rendering:optimizeQuality; }
-
-.formfield																			{ margin: 0; padding-bottom: 10px;}
-
+html {
+	font-family: 'PT Sans', sans-serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	background: url('/images/resume-bg.jpg');
+	background-size: cover;
+	background-color: #BCE0F0;
+	background-attachment: fixed;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	min-width: 300px;
+	background: rgba(255,255,255,0.8);
+	margin: 0 auto 0 auto;
+	width: 80%;
+	padding: 20px 30px 20px 30px;
+	border-top: 8px solid #00A9E0;
+}
+a {
+	color: #00A9E0;
+}
+a:hover {
+	text-decoration: none;
+}
+h1, h2, h3, h4 {
+	margin: 0;
+	font-weight: normal;
+}
+h1 {
+	border-bottom: 2px solid #00A9E0;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+h2 {
+	color: #00A9E0;
+	margin-bottom: 5px;
+	border-bottom: 1px solid #00A9E0;
+}
+h4 {
+	line-height: 1.1em;
+	font-weight: bold;
+}
+p {
+	line-height: 1.6em;
+	margin: 0;
+}
+ul {
+	margin: 5px;
+}
+li {
+	line-height: 1.6em;
+	margin-bottom: .5em;
+}
+.clearfix:before, .clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+#workexperience .two-column-left {
+	min-width: 220px;
+	max-width: 220px;
+	margin: 0;
+	padding: 0;
+}
+#workexperience .two-column-right {
+	margin: 0;
+	padding: 5px 0 0 0;
+}
+.header-fixed {
+	min-width: 300px;
+	background-color: #f5f5f5;
+	margin: 0 auto 0 auto;
+	padding: 20px 30px 0 30px;
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 80%;
+	border-top: 10px solid #00A9E0;
+}
+#info {
+	margin-top: 15px;
+}
+dt {
+	margin: 0 5px 8px 0;
+	float: left;
+	font-weight: bold;
+}
+dd {
+	margin: 0 0 8px 0;
+}
+dl {
+	padding-bottom: 10px;
+}
+dt#address {
+	background: url('images/linkedin.png') no-repeat left top;
+	background-size: 20px 20px;
+	padding-left: 30px;
+}
+dt#email {
+	background: url('images/email.png') no-repeat left top;
+	background-size: 20px 20px;
+	padding-left: 30px;
+}
+dt#github {
+	background: url('images/github.png') no-repeat left top;
+	background-size: 20px 20px;
+	padding-left: 30px;
+}
+dt#resume {
+	background: url('images/resume.png') no-repeat left top;
+	background-size: 20px 20px;
+	padding-left: 30px;
+}
+#profile-circular {
+	float: left;
+	margin: 10px 40px 0 0;
+	width: 120px;
+	height: 120px;
+	background-image: url('images/me-circle.png');
+	background-size: cover;
+	display: block;
+	border: 2px solid #00A9E0;
+	border-radius: 60px;
+	-webkit-border-radius: 60px;
+	-moz-border-radius: 60px;
+}
+#aboutme, #workexperience, #skills, #education, #languages {
+	margin: 20px 0 30px 0;
+	padding-left: 0 0 0 0;
+}
+#workexperience div.clearfix {
+	display: flex;
+}
+#workexperience span {
+	display: block;
+	padding-top: 5px;
+	color: #888888;
+	font-style: italic;
+}
+#workexperience h2 {
+	background: url('images/experience.png') no-repeat 0px 2px;
+	background-size: 24px 24px;
+	padding-left: 30px;
+}
+#skills h2 {
+	background: url('images/skills.png') no-repeat 0px 2px;
+	background-size: 24px 24px;
+	padding-left: 30px;
+}
+#education h2 {
+	background: url('images/education.png') no-repeat 0px 2px;
+	background-size: 24px 24px;
+	padding-left: 30px;
+}
+#languages h2 {
+	background: url('images/languages.png') no-repeat 0px 2px;
+	background-size: 24px 24px;
+	padding-left: 30px;
+}
+#contactme h2 {
+	background: url('images/smile.png') no-repeat 0px 2px;
+	background-size: 24px 24px;
+	padding-left: 30px;
+}
+#portfolio {
+	border-top: 1px solid #00A9E0;
+	margin-top: 20px;
+}
+#portfolio a {
+	display: block;
+	margin: 30px auto 50px auto;
+	border-radius: 50px;
+	overflow:hidden;
+	background: #00A9E0;
+	color: #ffffff;
+	width: 80%;
+	min-width: 240px;
+	font-size: 1em;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	text-decoration: none;
+}
+#portfolio a:hover {
+	text-decoration: none;
+	background-color: #fff;
+	border: 2px solid #00A9E0;
+	color: #00A9E0;
+}
+#skills ul {
+	list-style-type: none;
+	margin: 10px 0 20px 0;
+	padding: 0;
+	width: 100%;
+}
+#skills ul li {
+	display: block;
+	margin: 0 0 10px 0;
+	padding: 0;
+}
+#skills div {
+	display: flex;
+	justify-content: space-between;
+}
+#skills .two-column-left {
+	width:50%;
+	margin: 0 40px 0 0;
+	padding: 0;
+}
+#skills .two-column-right {
+	width:50%;
+	margin: 0;
+	padding: 0;
+}
+.level3 {
+	text-indent: -9999px;
+	display: block;
+	margin: 0;
+	width: 100px;
+	float: right;
+	background: url(images/level3.png) no-repeat right;
+	background-size: 75px 12px;
+	image-rendering:optimizeQuality;
+}
+.level4 {
+	text-indent: -9999px;
+	display: block;
+	margin: 0;
+	width: 100px;
+	float: right;
+	background: url(images/level4.png) no-repeat right;
+	background-size: 75px 12px;
+	image-rendering:optimizeQuality;
+}
+.level5 {
+	text-indent: -9999px;
+	display: block;
+	margin: 0;
+	width: 100px;
+	float: right;
+	background: url(images/level5.png) no-repeat right;
+	background-size: 75px 12px;
+	image-rendering:optimizeQuality;
+}
+.formfield {
+	margin: 0;
+	padding-bottom: 10px;
+}
 @media all and (max-width: 1440px) {
-	body																			{ width: 90%; }
-	.header-fixed																	{ width: 80%; }
+	body {
+			width: 90%;
+ }
+	.header-fixed {
+			width: 80%;
+ }
 }
-
 @media all and (min-width: 550px) and (max-width: 920px) {
-	#skills div																		{ display: block; }
-	#skills ul 																		{ margin-bottom: 0; padding-bottom: 0; }
-	.three-column-left,
-	.three-column-right																{ display: block; width: 100%; margin: 0; padding: 0; }
-
-	.two-column-left																{ min-width: none; max-width: none; margin: 10px 0 0 0; border-bottom: 1px solid #cccccc; }
-	.two-column-right																{ min-width: none; max-width: none; }
-
-	.header-fixed																	{ position: static !important; width: 100% !important; border: none !important; padding: 0 !important; }
-
-	#workexperience div.clearfix													{ flex-direction: column; }
-	#workexperience div.clearfix div h3												{ display: inline; }
-	#workexperience div.clearfix div span 											{ display: inline; float: right; }
+	#skills div {
+			display: block;
+ }
+	#skills ul {
+			margin-bottom: 0;
+			padding-bottom: 0;
+ }
+	.three-column-left, .three-column-right {
+			display: block;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+ }
+	.two-column-left {
+			min-width: none;
+			max-width: none;
+			margin: 10px 0 0 0;
+			border-bottom: 1px solid #cccccc;
+ }
+	.two-column-right {
+			min-width: none;
+			max-width: none;
+ }
+	.header-fixed {
+			position: static !important;
+			width: 100% !important;
+			border: none !important;
+			padding: 0 !important;
+ }
+	#workexperience div.clearfix {
+			flex-direction: column;
+ }
+	#workexperience div.clearfix div h3 {
+			display: inline;
+ }
+	#workexperience div.clearfix div span {
+			display: inline;
+ }
 }
-
 @media all and (max-width: 550px) {
-	#profile-circular																{ width: 240px; height: 240px; border-radius: 120px; margin: 0 auto 20px auto; float: none; }
-
-	.header-fixed																	{ position: static !important; width: 100% !important; border: none !important; padding: 0 !important; }
-
-	#info dt 																		{ text-indent: -9999px; padding-left: 20px; }
-
-	#aboutme																		{ margin-top: 0; }
-
-	#skills div																		{ display: block; }
-	#skills ul 																		{ margin-bottom: 0; padding-bottom: 0; }
-
-	.two-column-left																{ min-width: none; max-width: none; padding: 0 0 10px 0; margin: 10px 0 0 0; border-bottom: 1px solid #cccccc; }
-	.two-column-right																{ min-width: none; max-width: none; }
-
-	#workexperience ul 																{ padding: 0 0 0 20px; margin: 5px 0 0 0; }
-	#workexperience div.clearfix													{ flex-direction: column; }
-	#workexperience div.clearfix div h3												{ display: block; }
-	#workexperience div.clearfix div span 											{ display: block; }
-
-	#education dt 																	{ float: none; margin-bottom: 0; }
-	#education dd span 																{ font-style: italic; }
+	#profile-circular {
+			width: 240px;
+			height: 240px;
+			border-radius: 120px;
+			margin: 0 auto 20px auto;
+			float: none;
+ }
+	.header-fixed {
+			position: static !important;
+			width: 100% !important;
+			border: none !important;
+			padding: 0 !important;
+ }
+	#info dt {
+			text-indent: -9999px;
+			padding-left: 20px;
+ }
+	#aboutme {
+			margin-top: 0;
+ }
+	#skills div {
+			display: block;
+ }
+	#skills ul {
+			margin-bottom: 0;
+			padding-bottom: 0;
+ }
+	.two-column-left {
+			min-width: none;
+			max-width: none;
+			padding: 0 0 10px 0;
+			margin: 10px 0 0 0;
+			border-bottom: 1px solid #cccccc;
+ }
+	.two-column-right {
+			min-width: none;
+			max-width: none;
+ }
+	#workexperience ul {
+			padding: 0 0 0 20px;
+			margin: 5px 0 0 0;
+ }
+	#workexperience div.clearfix {
+			flex-direction: column;
+ }
+	#workexperience div.clearfix div h3 {
+			display: block;
+ }
+	#workexperience div.clearfix div span {
+			display: block;
+ }
+	#education dt {
+			float: none;
+			margin-bottom: 0;
+ }
+	#education dd span {
+			font-style: italic;
+ }
+}
